@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Solar System Age Calculator</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="includes/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="includes/include.js"></script>
+
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero" style="background-image:url('https://picsum.photos/1920/1080');">
+  <div>
+    <h1 class="display-1 fw-bold">Age Calculator</h1>
+    <p class="lead">Calculate your age in different time units</p>
+    <input type="number" id="ageInput" placeholder="Enter your age (Earth years)" class="form-control w-50 mx-auto mt-4">
+    <button onclick="calculateAge()" class="btn btn-primary mt-3">Calculate</button>
+  </div>
+</section>
+
+<section class="section" id="planetsSection">
+  <h1 class="display-1 fw-bold py-5 m-5">The Planets</h1>
+
+  <div class="row">
+
+    <!-- MERCURY -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Mercury</h3>
+        <p>Age: <span id="mercuryAge">-</span></p>
+        <p>Revolution: <span id="mercuryRev">-</span></p>
+        <p>Orbit Period: 0.24 Earth years</p>
+        <p>Distance: 57.9 million km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENUS -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Venus</h3>
+        <p>Age: <span id="venusAge">-</span></p>
+        <p>Revolution: <span id="venusRev">-</span></p>
+        <p>Orbit Period: 0.62 Earth years</p>
+        <p>Distance: 108.2 million km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- EARTH -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Earth</h3>
+        <p>Age: <span id="earthAge">-</span></p>
+        <p>Revolution: <span id="earthRev">-</span></p>
+        <p>Orbit Period: 1.00 Earth years</p>
+        <p>Distance: 149.6 million km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARS -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Mars</h3>
+        <p>Age: <span id="marsAge">-</span></p>
+        <p>Revolution: <span id="marsRev">-</span></p>
+        <p>Orbit Period: 1.88 Earth years</p>
+        <p>Distance: 227.9 million km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- JUPITER -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Jupiter</h3>
+        <p>Age: <span id="jupiterAge">-</span></p>
+        <p>Revolution: <span id="jupiterRev">-</span></p>
+        <p>Orbit Period: 11.86 Earth years</p>
+        <p>Distance: 778.5 million km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- SATURN -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Saturn</h3>
+        <p>Age: <span id="saturnAge">-</span></p>
+        <p>Revolution: <span id="saturnRev">-</span></p>
+        <p>Orbit Period: 29.46 Earth years</p>
+        <p>Distance: 1.4 billion km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- URANUS -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Uranus</h3>
+        <p>Age: <span id="uranusAge">-</span></p>
+        <p>Revolution: <span id="uranusRev">-</span></p>
+        <p>Orbit Period: 84.01 Earth years</p>
+        <p>Distance: 2.9 billion km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEPTUNE -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Neptune</h3>
+        <p>Age: <span id="neptuneAge">-</span></p>
+        <p>Revolution: <span id="neptuneRev">-</span></p>
+        <p>Orbit Period: 164.8 Earth years</p>
+        <p>Distance: 4.5 billion km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLUTO -->
+    <div class="col-md-4">
+      <div class="planet-card">
+        <h3>Pluto</h3>
+        <p>Age: <span id="plutoAge">-</span></p>
+        <p>Revolution: <span id="plutoRev">-</span></p>
+        <p>Orbit Period: 248 Earth years</p>
+        <p>Distance: 5.9 billion km</p>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ID"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+function calculateAge() {
+  let age = document.getElementById("ageInput").value;
+  if (!age) return;
+
+  document.getElementById("mercuryAge").innerText = (age / 0.24).toFixed(2);
+  document.getElementById("mercuryRev").innerText = (age / 0.24).toFixed(2);
+
+  document.getElementById("venusAge").innerText = (age / 0.62).toFixed(2);
+  document.getElementById("venusRev").innerText = (age / 0.62).toFixed(2);
+
+  document.getElementById("earthAge").innerText = (age / 1).toFixed(2);
+  document.getElementById("earthRev").innerText = (age / 1).toFixed(2);
+
+  document.getElementById("marsAge").innerText = (age / 1.88).toFixed(2);
+  document.getElementById("marsRev").innerText = (age / 1.88).toFixed(2);
+
+  document.getElementById("jupiterAge").innerText = (age / 11.86).toFixed(2);
+  document.getElementById("jupiterRev").innerText = (age / 11.86).toFixed(2);
+
+  document.getElementById("saturnAge").innerText = (age / 29.46).toFixed(2);
+  document.getElementById("saturnRev").innerText = (age / 29.46).toFixed(2);
+
+  document.getElementById("uranusAge").innerText = (age / 84.01).toFixed(2);
+  document.getElementById("uranusRev").innerText = (age / 84.01).toFixed(2);
+
+  document.getElementById("neptuneAge").innerText = (age / 164.8).toFixed(2);
+  document.getElementById("neptuneRev").innerText = (age / 164.8).toFixed(2);
+
+  document.getElementById("plutoAge").innerText = (age / 248).toFixed(2);
+  document.getElementById("plutoRev").innerText = (age / 248).toFixed(2);
+
+  document.getElementById("planetsSection").scrollIntoView({
+  behavior: "smooth"
+});
+}
+</script>
+
+</body>
+</html>

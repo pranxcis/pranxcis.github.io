@@ -1,0 +1,105 @@
+body { 
+  background:#0b0f1a; 
+  color:white; 
+  scroll-behavior:smooth;
+}
+
+h1 {
+    font-weight: 1200;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+}
+
+/* FULL SCREEN SECTIONS */
+.section {
+  height: auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+}
+
+/* BIG CARDS */
+.big-card {
+  width:100%;
+  max-width:1500px;
+  margin:15px 0;
+  padding:40px;
+  border-radius:20px;
+  background:#111827;
+  transition:0.3s;
+}
+
+.big-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(0,123,255,0.5);
+}
+
+.btn {
+  border-radius:30px;
+  padding:10px 25px;
+}
+
+/* PLANET CARDS */
+
+.planet-card {
+  background:#111827;
+  border-radius:20px;
+  padding:20px;
+  margin:10px;
+  transition:0.3s;
+}
+
+.planet-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(0,123,255,0.5);
+}
+
+.others-card {
+  background:#111827;
+  border-radius:20px;
+  padding:20px;
+  margin:10px;
+  width: 100%;
+  transition:0.3s;
+}
+
+.others-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(0,123,255,0.5);
+}
+
+/* DL CARDS */
+.download-card {
+  width:100%;
+  max-width:1400px;
+  margin:15px 0;
+  padding:40px;
+  border-radius:20px;
+  background:#111827;
+  transition:0.3s;
+
+  display: flex;
+  align-items: flex-start;   /* aligns items at the top */
+  justify-content: flex-start; /* pushes everything to the left */
+  gap: 12px; /* space between image and text */
+}
+
+.download-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(0,123,255,0.5);
+}
