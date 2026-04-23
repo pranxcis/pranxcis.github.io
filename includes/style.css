@@ -1,105 +1,147 @@
+/* GLOBAL */
 body { 
-  background:#0b0f1a; 
-  color:white; 
-  scroll-behavior:smooth;
+  background: #0b0f1a; 
+  color: white; 
+  scroll-behavior: smooth;
+  font-size: clamp(14px, 1.5vw, 18px);
+  margin: 0;
 }
 
+/* TYPOGRAPHY */
 h1 {
-    font-weight: 1200;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900; /* fixed (1200 is invalid) */
 }
 
 h2 {
-    font-weight: bold;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: bold;
 }
 
+/* HERO SECTION */
 .hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background-size:cover;
-  background-position:center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 }
 
-/* FULL SCREEN SECTIONS */
+/* SECTIONS */
 .section {
   height: auto;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 /* BIG CARDS */
 .big-card {
-  width:100%;
-  max-width:1500px;
-  margin:15px 0;
-  padding:40px;
-  border-radius:20px;
-  background:#111827;
-  transition:0.3s;
-}
-
-.big-card:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 25px rgba(0,123,255,0.5);
-}
-
-.btn {
-  border-radius:30px;
-  padding:10px 25px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #111827;
+  transition: 0.3s;
 }
 
 /* PLANET CARDS */
-
 .planet-card {
-  background:#111827;
-  border-radius:20px;
-  padding:20px;
-  margin:10px;
-  transition:0.3s;
-}
-
-.planet-card:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 20px rgba(0,123,255,0.5);
+  background: #111827;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  transition: 0.3s;
 }
 
 .others-card {
-  background:#111827;
-  border-radius:20px;
-  padding:20px;
-  margin:10px;
+  background: #111827;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
   width: 100%;
-  transition:0.3s;
+  transition: 0.3s;
 }
 
-.others-card:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 20px rgba(0,123,255,0.5);
-}
-
-/* DL CARDS */
+/* DOWNLOAD CARD */
 .download-card {
-  width:100%;
-  max-width:1400px;
-  margin:15px 0;
-  padding:40px;
-  border-radius:20px;
-  background:#111827;
-  transition:0.3s;
+  width: 100%;
+  max-width: 1400px;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #111827;
+  transition: 0.3s;
 
   display: flex;
-  align-items: flex-start;   /* aligns items at the top */
-  justify-content: flex-start; /* pushes everything to the left */
-  gap: 12px; /* space between image and text */
+  flex-direction: column; /* mobile first */
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
-.download-card:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 25px rgba(0,123,255,0.5);
+/* BUTTONS */
+.btn {
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* CARD GRID (FOR MULTIPLE CARDS) */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .section {
+    padding: 40px;
+  }
+
+  .big-card,
+  .download-card {
+    padding: 40px;
+  }
+
+  .download-card {
+    flex-direction: row; /* switch to horizontal */
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* HOVER EFFECTS (ONLY ON DEVICES THAT SUPPORT HOVER) */
+@media (hover: hover) {
+  .big-card:hover,
+  .planet-card:hover,
+  .others-card:hover,
+  .download-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,123,255,0.5);
+  }
 }
